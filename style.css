@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f8f9fa, #e0f7fa);
+    padding: 20px;
+}
+
+h1 {
+    color: #2e7d32;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 400px;
+    max-width: 95%;
+}
+
+/* Form & Messages */
+.form, #message {
+    background: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.2s;
+}
+
+.form:hover, #message:hover {
+    transform: translateY(-3px);
+}
+
+.form label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form input, .form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.form input:focus, .form textarea:focus {
+    border-color: #2e7d32;
+    box-shadow: 0 0 10px rgba(46,125,50,0.3);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#submit1 {
+    background: linear-gradient(90deg, #4caf50, #2e7d32);
+    color: white;
+}
+
+#submit1:hover {
+    background: linear-gradient(90deg, #2e7d32, #1b5e20);
+}
+
+#deletebtn {
+    background: linear-gradient(90deg, #e53935, #b71c1c);
+    color: white;
+}
+
+#deletebtn:hover {
+    background: linear-gradient(90deg, #b71c1c, #7f0000);
+}
+
+/* Message Notes */
+#message div {
+    background: #f1f8e9;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.2s;
+}
+
+#message div:hover {
+    background: #dcedc8;
+    transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .form, #message {
+        padding: 15px;
+    }
+
+    input, textarea, .btn {
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
